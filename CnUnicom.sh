@@ -31,8 +31,7 @@ echo ${all_parameter[*]} | grep -qE "deviceId@[0-9]+" && deviceId=$(echo ${all_p
 #####
 
 # 使用Github Action运行时需要传入参数来修改工作路径: githubaction
-workdirbase="/var/log/CnUnicom"
-echo ${all_parameter[*]} | grep -qE "githubaction" && workdirbase="$(pwd)/CnUnicom"
+workdirbase=workdirbase="$(pwd)/CnUnicom"
 
 # 联通APP版本
 unicom_version=8.0100

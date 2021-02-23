@@ -1,14 +1,11 @@
-name: 签到
+name: 联通签到
 
 on:
-  push:
-    branches: [ master ]
-  workflow_dispatch:
-  schedule:
-    - cron: '0 18 * * *'
-  watch:
-    types: started
-    
+    push:
+        branches:
+            - main
+    schedule:
+        - cron: '0 2 * * *'
 jobs:
   run-it:
     runs-on: ubuntu-latest
@@ -30,3 +27,4 @@ jobs:
            PARAMETER: ${{ secrets.PARAMETER }}
           run: |
            bash CnUnicom.sh $PARAMETER
+              
