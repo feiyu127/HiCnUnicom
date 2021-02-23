@@ -3,9 +3,10 @@ name: 联通签到
 on:
     push:
         branches:
-            - main
+            - master
     schedule:
         - cron: '0 2 * * *'
+    workflow_dispatch:
 jobs:
   run-it:
     runs-on: ubuntu-latest
